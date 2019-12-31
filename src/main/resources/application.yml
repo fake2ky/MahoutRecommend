@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+spring:
+  thymeleaf:
+    cache: false
+  datasource:
+    url: jdbc:mysql:///movie?serverTimezone=Hongkong&nullCatalogMeansCurrent=true&characterEncoding=UTF-8
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  type-aliases-package: com.mapper
+  mapper-locations: classpath:mapping/**/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
